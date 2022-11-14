@@ -1,17 +1,20 @@
-import type { NextRequest, NextResponse } from "next/server";
-
-// export default function handler (request: NextRequest, response: NextResponse) {
-//   return new Response(`Hello, from ${request.url} I'm now an Edge API Routes!`)
-// }
-
-// export const config = {
-//   runtime: 'experimental-edge',
-// }
+import type { NextRequest } from "next/server";
 
 export const config = {
   runtime: 'experimental-edge',
 }
 
-export default (req: NextRequest) => {
-  return new Response('Hello I am Dev Meditation!')
-} 
+export default async function handler(request: NextRequest) {
+  return new Response(
+    JSON.stringify({
+      name: 'Fire Kaue',
+      youtubeChannel: 'youtube.com/@firekaue',
+    }),
+    {
+      status: 200,
+      headers: {
+        'content-type': 'application/json',
+      },
+    }
+  )
+}
