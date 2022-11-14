@@ -1,7 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextRequest, NextResponse } from "next/server";
 
-export default function handler(request: NextApiRequest, response: NextApiResponse) {
-  response.status(200).json({
-    name: 'John Doe'
-  })
+export default function handler (request: NextRequest, response: NextResponse) {
+  return new Response(`Hello, from ${request.url} I'm now an Edge API Routes!`)
+}
+
+export const config = {
+  runtime: 'experimental-edge',
 }
