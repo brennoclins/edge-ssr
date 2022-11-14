@@ -1,6 +1,6 @@
-# Esse projeto é um mini estudo fa nova funcionalidade do NextJS versão 13 
+# NextJS 13 com suporte à EDGE
 
-NextJS 13 com suporte à EDGE
+Esse projeto é um mini estudo da nova funcionalidade do NextJS versão 13
 
 ### Links:
 
