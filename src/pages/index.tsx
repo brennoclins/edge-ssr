@@ -14,9 +14,12 @@ export default function Home({ users }: HomeProps) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const users = [
-    'Brenno',
-    'Kauê',
-    'Milena',
+    'Dev Meditation',
+    'Fire Kauê',
+    'Mon Ray',
+    'Kitana',
+    'SubZero',
+    'Scorpion'
   ]
 
   return {

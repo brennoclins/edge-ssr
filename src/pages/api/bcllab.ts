@@ -5,16 +5,7 @@ export const config = {
 }
 
 export default async function handler(request: NextRequest) {
-  return new Response(
-    JSON.stringify({
-      name: 'Dev Meditation',
-    }),
-    {
-      status: 200,
-      headers: {
-        'content-type': 'application/json',
-        'cache-control': 'public, s-maxage=1200, stale-while-revalidate=600',
-      },
-    }
-  )
+  const { searchParams } = new URL(request.url)
+  const email = searchParams.get('email')
+  return new Response(email)
 }
