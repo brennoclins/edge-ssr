@@ -2,6 +2,14 @@
 
 Esse projeto é um mini estudo da nova funcionalidade do NextJS versão 13
 
+#### Edge API Routes
+
+- Basico
+- JSON Response
+- Cache-Control
+- Query Parameters
+- Forwarding Headers
+
 ### Links:
 
 - [Next.js](https://nextjs.org/)js/tree/canary/packages/create-next-app).

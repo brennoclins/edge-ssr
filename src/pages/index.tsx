@@ -6,9 +6,11 @@ interface HomeProps {
 
 export default function Home({ users }: HomeProps) {
   return (
+    <>
     <ul>
       {users.map(user => <li key={user}>{user}</li>)}
     </ul>
+    </>
   )
 }
 
@@ -17,9 +19,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     'Dev Meditation',
     'Fire Kauê',
     'Mon Ray',
-    'Kitana',
-    'SubZero',
-    'Scorpion'
+    'Milena Mi',
   ]
 
   return {
