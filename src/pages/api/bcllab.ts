@@ -4,8 +4,18 @@ export const config = {
   runtime: 'experimental-edge',
 }
 
-export default async function handler(request: NextRequest) {
-  const { searchParams } = new URL(request.url)
-  const email = searchParams.get('email')
-  return new Response(email)
+export default async function handler(req: NextRequest) {
+  const authorization = req.cookies.get('authorization')?.value
+
+  if(!authorization) {
+    throw new Error({message: 'Authorization Fail!'})
+  }
+
+  return fetch('https://edge-ssr-devmeditation.vercel.app/api/bcllab', {
+    method: req.method,
+    headers: {
+      authorization,
+    },
+    redirect: 'manual',
+  })
 }
