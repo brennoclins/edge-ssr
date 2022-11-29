@@ -12,7 +12,7 @@ Esse projeto é um mini estudo da nova funcionalidade do NextJS versão 13
 
 ### Links:
 
-- [Next.js](https://nextjs.org/)js/tree/canary/packages/create-next-app).
+- [Next.js](https://nextjs.org/)
 
 ## Como iniciar o projeto:
 

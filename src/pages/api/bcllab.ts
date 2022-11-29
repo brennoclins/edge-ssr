@@ -8,7 +8,7 @@ export default async function handler(req: NextRequest) {
   const authorization = req.cookies.get('authorization')?.value
 
   if(!authorization) {
-    throw new Error({message: 'Authorization Fail!'})
+    throw new Error('Authorization Fail!')
   }
 
   return fetch('https://edge-ssr-devmeditation.vercel.app/api/bcllab', {
